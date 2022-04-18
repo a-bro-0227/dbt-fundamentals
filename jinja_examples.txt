@@ -1,0 +1,47 @@
+{#
+
+{% set my_cool_string = 'wow! cool!' %}
+{% set jinja = 'i can write jina!' %}
+{% set numb_yrs = 1000 %}
+
+{{ my_cool_string }} {{ jinja }} i can write jinja for {{ numb_yrs}} years!
+
+
+
+{% set my_animals = ['cat', 'dog', 'monkey', 'fish'] %}
+
+{%- for i in my_animals %}
+    my favorite animal is {{ i }}
+{%- endfor %}
+
+
+{% set temperature = 65 %}
+
+{% if temperature <= 55 %}
+    Time for a latte
+{% else %}
+    Time for a cold brew
+{% endif %}
+
+
+{% set foods = ['carrot', 'pepper', 'banana'] %}
+
+{%- for f in foods -%}
+    {%- if f == 'banana' %}
+        {{f}} is a fruit
+    {% else %}
+        {{f}} is a veggie
+    {%- endif %}
+{%- endfor -%}
+
+#}
+
+
+{% set dict = {
+    'word': 'data',
+    'speech': 'noun',
+    'def': 'if you know you know'
+    }
+%}
+
+{{ dict['word'] }} {{ dict['speech'] }}
